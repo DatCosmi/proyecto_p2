@@ -19,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { ProductFormComponent } from './view/product-form/product-form.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,9 @@ import { ProductFormComponent } from './view/product-form/product-form.component
     MatIconModule,
     MatPaginator,
     MatTableModule,
+    MatSlideToggleModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],

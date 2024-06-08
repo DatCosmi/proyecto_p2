@@ -1,1 +1,81 @@
-<p>product-form works!</p>
+<div class="div-form">
+  <h1 class="title">Formulario</h1>
+  <form [formGroup]="formGroup">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input placeholder="Nombre" matInput id="name" formControlName="name" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Código</mat-label>
+        <input placeholder="Código" matInput id="code" formControlName="code" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Categoría</mat-label>
+        <input
+          placeholder="Categoría"
+          matInput
+          id="category"
+          formControlName="category"
+          type="category"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input
+          placeholder="Descripción"
+          matInput
+          id="description"
+          formControlName="description"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input
+          placeholder="Precio"
+          matInput
+          id="price"
+          formControlName="price"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Cantidad</mat-label>
+        <input
+          placeholder="Cantidad"
+          matInput
+          id="amount"
+          formControlName="amount"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-slide-toggle
+        id="status"
+        formControlName="status"
+        [checked]="this.formGroup.value.status"
+      >
+        <mat-label>Estatus</mat-label>
+      </mat-slide-toggle>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="formGroup.invalid"
+      (click)="submit()"
+      type="button"
+    >
+      Registrar
+    </button>
+  </form>
+</div>

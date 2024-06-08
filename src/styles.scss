@@ -81,15 +81,20 @@ $font-family: "Arial, sans-serif";
     overflow-x: auto;
 
     .table {
-      min-width: 600px; // Ajusta según tus necesidades
+      min-width: 600px;
     }
   }
+}
+
+// Form
+.div-form {
+  margin: auto;
 }
 
 // Grid
 .grid-container {
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 6rem 1fr;
 }
 
 .grid-item {
@@ -101,6 +106,9 @@ $font-family: "Arial, sans-serif";
   background-color: #18181f;
   padding: 1rem;
   color: #fff;
+  position: fixed;
+  width: 98%;
+  z-index: 5;
 
   .active-link {
     background-color: #6d54bd;
